@@ -57,7 +57,7 @@ public class TodoAPI {
                 return "The id \"" + req.params(":id") + "\" is not a number!";
             }
 
-            if (!tasks.containsKey(key)) return "Todo with the id  \"" + key + "\" not found!";
+            if (!tasks.containsKey(key)) return "Todo with the id \"" + key + "\" not found!";
             Todo t = tasks.get(key);
             return gson.toJson(t);
 
@@ -71,7 +71,7 @@ public class TodoAPI {
             }catch (NumberFormatException e){
                 return "The id \"" + req.params(":id") + "\" is not a number!";
             }
-            if (!tasks.containsKey(key)) return "Todo with the id  \"" + key + "\" not found!";
+            if (!tasks.containsKey(key)) return "Todo with the id \"" + key + "\" not found!";
             Todo t = tasks.get(key);
             t = gson.fromJson(req.body(), Todo.class);
             tasks.put(key, t);
@@ -87,7 +87,7 @@ public class TodoAPI {
                 return "The id \"" + req.params(":id") + "\" is not a number!";
             }
             Todo t = null;
-            if (!tasks.containsKey(key)) return "Todo with the id  \"" + key + "\" not found!";
+            if (!tasks.containsKey(key)) return "Todo with the id \"" + key + "\" not found!";
             t = tasks.remove(key);
             return gson.toJson(t);
         });
