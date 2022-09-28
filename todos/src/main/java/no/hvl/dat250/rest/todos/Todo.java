@@ -32,6 +32,7 @@ public class Todo {
         return description;
     }
 
+
     // Do not change equals and hashcode!
 
     @Override
